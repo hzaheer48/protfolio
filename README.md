@@ -1,7 +1,7 @@
 
-# Landing Page React Component
+# Protfolio
 
-This React component is a landing page layout designed using Material-UI and other custom components. It includes sections for personal information, about me, skills, experience & education, and a sidebar with additional features.
+This React component is a protfolio layout designed using Material-UI and other custom components. It includes sections for personal information, about me, skills, experience & education, and a sidebar with additional features.
 
 ## Prerequisites
 
