@@ -1,0 +1,29 @@
+.Logo-animation {
+    animation: rotate 4s linear infinite;
+}
+
+.Image-animation {
+    animation: pointAnimation 2s infinite;
+  }
+
+@keyframes rotate {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+}
+
+@keyframes pointAnimation {
+    0% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-10px);
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
+  
