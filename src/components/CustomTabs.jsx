@@ -15,7 +15,7 @@ import PhoneIcon from "@mui/icons-material/Phone";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 
-export default function CustomTabs() {
+export default function CustomTabs({ lightTheme }) {
   const [value, setValue] = React.useState("projects");
   const handleChange = (event, newValue) => {
     setValue(newValue);
@@ -34,32 +34,32 @@ export default function CustomTabs() {
     {
       name: "Amazon",
       language: "Jupyter Notebook",
-      link: "https://github.com/your-username/Amazon",
+      link: "https://github.com/hzaheer48/Amazon",
     },
     {
       name: "Yield Prediction",
       language: "Jupyter Notebook",
-      link: "https://github.com/your-username/Yield",
+      link: "https://github.com/hzaheer48/Yield",
     },
     {
       name: "AI-Enabled Cars Price Predictor",
       language: "Python",
-      link: "https://github.com/your-username/AI-EnabledCarsPricePredictor",
+      link: "https://github.com/hzaheer48/AI-EnabledCarsPricePredictor",
     },
     {
       name: "Cricket Info App",
       language: "PUG, NodeJS, ExpressJS",
-      link: "https://github.com/your-username/CricketInfoApp",
+      link: "https://github.com/hzaheer48/CricketInfoApp",
     },
     {
       name: "Thyroid",
       language: "Jupyter Notebook",
-      link: "https://github.com/your-username/Thyroid",
+      link: "https://github.com/hzaheer48/Thyroid",
     },
     {
       name: "Restaurant",
       language: "Jupyter Notebook",
-      link: "https://github.com/your-username/Restaurant",
+      link: "https://github.com/hzaheer48/Restaurant",
     },
   ];
   const contactArray = [
@@ -85,8 +85,22 @@ export default function CustomTabs() {
       <TabContext value={value}>
         <Box sx={{ borderBottom: 1, borderColor: "divider" }}>
           <TabList onChange={handleChange}>
-            <Tab label="Projects" value="projects" style={{textTransform:"capitalize"}}/>
-            <Tab label="Contact" value="contact" style={{textTransform:"capitalize"}}/>
+            <Tab
+              label="Projects"
+              value="projects"
+              style={{
+                color: lightTheme ? "black" : "white",
+                textTransform: "capitalize",
+              }}
+            />
+            <Tab
+              label="Contact"
+              value="contact"
+              style={{
+                color: lightTheme ? "black" : "white",
+                textTransform: "capitalize",
+              }}
+            />
           </TabList>
         </Box>
         <TabPanel value="projects">
@@ -99,16 +113,14 @@ export default function CustomTabs() {
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  <ListItemIcon>
+                  <ListItemIcon
+                    style={{ color: lightTheme ? "black" : "white" }}
+                  >
                     <ApiIcon />
                   </ListItemIcon>
                   <ListItemText
+                    style={{ color: lightTheme ? "black" : "white" }}
                     primary={project.name}
-                    secondary={
-                      <>
-                        {<strong>Language:</strong>} {project.language}
-                      </>
-                    }
                   />
                 </ListItemButton>
               </ListItem>
@@ -125,15 +137,17 @@ export default function CustomTabs() {
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  <ListItemIcon>
+                  <ListItemIcon
+                    style={{ color: lightTheme ? "black" : "white" }}
+                  >
                     {contact.type === "Email" && <EmailIcon />}
                     {contact.type === "Phone" && <PhoneIcon />}
                     {contact.type === "GitHub" && <GitHubIcon />}
                     {contact.type === "LinkedIn" && <LinkedInIcon />}
                   </ListItemIcon>
                   <ListItemText
+                    style={{ color: lightTheme ? "black" : "white" }}
                     primary={contact.value}
-                    secondary={contact.type}
                   />
                 </ListItemButton>
               </ListItem>

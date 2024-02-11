@@ -1,7 +1,7 @@
 import PolaroidImage from "./PolaroidImage";
 import { Box } from "@mui/material";
 import { useWindowSize } from "@uidotdev/usehooks";
-export default function PolaroidImageView() {
+export default function PolaroidImageView({ lightTheme }) {
   const screenSize = useWindowSize();
   return (
     <Box
@@ -16,7 +16,7 @@ export default function PolaroidImageView() {
             : "100vw",
       }}
     >
-      <PolaroidImage />
+      <PolaroidImage lightTheme={lightTheme} />
     </Box>
   );
 }

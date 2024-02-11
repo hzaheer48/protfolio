@@ -7,18 +7,26 @@ import MapsHomeWorkIcon from "@mui/icons-material/MapsHomeWork";
 import SchoolIcon from "@mui/icons-material/School";
 import StarIcon from "@mui/icons-material/Star";
 import { Typography } from "@mui/material";
-export default function CustomTimeline() {
+export default function CustomTimeline({ lightTheme }) {
   return (
     <VerticalTimeline>
       <VerticalTimelineElement
         className="vertical-timeline-element--work"
-        contentStyle={{ background: "rgb(33, 150, 243)", color: "#fff" }}
+        contentStyle={{
+          background: lightTheme ? "rgb(33, 150, 243)" : "#3F2E3E",
+          color: "#fff",
+        }}
         contentArrowStyle={{ borderRight: "7px solid  rgb(33, 150, 243)" }}
         date="September,2023-present"
-        iconStyle={{ background: "rgb(33, 150, 243)", color: "#fff" }}
+        iconStyle={{
+          background: lightTheme ? "rgb(33, 150, 243)" : "#331D2C",
+          color: "#fff",
+        }}
         icon={<MapsHomeWorkIcon />}
       >
-        <Typography variant="h5" className="vertical-timeline-element-title">Software Developer</Typography>
+        <Typography variant="h5" className="vertical-timeline-element-title">
+          Software Developer
+        </Typography>
         <Typography variant="h6" className="vertical-timeline-element-subtitle">
           LIMS, Rawalpindi, Pakistan
         </Typography>
@@ -27,7 +35,10 @@ export default function CustomTimeline() {
       <VerticalTimelineElement
         className="vertical-timeline-element--work"
         date="December,2021-September,2023"
-        iconStyle={{ background: "rgb(33, 150, 243)", color: "#fff" }}
+        iconStyle={{
+          background: lightTheme ? "rgb(33, 150, 243)" : "#331D2C",
+          color: "#fff",
+        }}
         icon={<MapsHomeWorkIcon />}
       >
         <Typography variant="h5" className="vertical-timeline-element-title">
@@ -41,7 +52,10 @@ export default function CustomTimeline() {
       <VerticalTimelineElement
         className="vertical-timeline-element--education"
         date="2019-2023"
-        iconStyle={{ background: "rgb(233, 30, 99)", color: "#fff" }}
+        iconStyle={{
+          background: lightTheme ? "rgb(233, 30, 99)" : "#662549",
+          color: "#fff",
+        }}
         icon={<SchoolIcon />}
       >
         <Typography variant="h5" className="vertical-timeline-element-title">
@@ -55,7 +69,10 @@ export default function CustomTimeline() {
       <VerticalTimelineElement
         className="vertical-timeline-element--education"
         date="2017-2019"
-        iconStyle={{ background: "rgb(233, 30, 99)", color: "#fff" }}
+        iconStyle={{
+          background: lightTheme ? "rgb(233, 30, 99)" : "#662549",
+          color: "#fff",
+        }}
         icon={<SchoolIcon />}
       >
         <Typography variant="h5" className="vertical-timeline-element-title">
@@ -69,7 +86,10 @@ export default function CustomTimeline() {
       <VerticalTimelineElement
         className="vertical-timeline-element--education"
         date="2015 - 2017"
-        iconStyle={{ background: "rgb(233, 30, 99)", color: "#fff" }}
+        iconStyle={{
+          background: lightTheme ? "rgb(233, 30, 99)" : "#662549",
+          color: "#fff",
+        }}
         icon={<SchoolIcon />}
       >
         <Typography variant="h5" className="vertical-timeline-element-title">
@@ -81,7 +101,10 @@ export default function CustomTimeline() {
         <Typography variant="body2">Percentage: 90.45%</Typography>
       </VerticalTimelineElement>
       <VerticalTimelineElement
-        iconStyle={{ background: "rgb(16, 204, 82)", color: "#fff" }}
+        iconStyle={{
+          background: lightTheme ? "rgb(16, 204, 82)" : "#005B41",
+          color: "#fff",
+        }}
         icon={<StarIcon />}
       />
     </VerticalTimeline>

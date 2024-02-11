@@ -2,9 +2,7 @@ import * as React from "react";
 import { styled } from "@mui/material/styles";
 import FormGroup from "@mui/material/FormGroup";
 import FormControlLabel from "@mui/material/FormControlLabel";
-import Switch, { SwitchProps } from "@mui/material/Switch";
-import Stack from "@mui/material/Stack";
-import Typography from "@mui/material/Typography";
+import Switch from "@mui/material/Switch";
 
 const LightDarkMode = styled(Switch)(({ theme }) => ({
   width: 62,
@@ -53,7 +51,7 @@ const LightDarkMode = styled(Switch)(({ theme }) => ({
   },
 }));
 
-export default function SwitchButton() {
+export default function SwitchButton({ lightTheme, setLightTheme,setThemeInCookies }) {
   return (
     <FormGroup
       style={{
@@ -63,7 +61,17 @@ export default function SwitchButton() {
         marginLeft: "30px",
       }}
     >
-      <FormControlLabel control={<LightDarkMode defaultChecked />} />
+      <FormControlLabel
+        control={
+          <LightDarkMode
+            defaultChecked = {lightTheme}
+            onClick={() => {
+              setLightTheme(!lightTheme);
+              setThemeInCookies(!lightTheme);
+            }}
+          />
+        }
+      />
     </FormGroup>
   );
 }

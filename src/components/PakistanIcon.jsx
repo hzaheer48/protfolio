@@ -1,4 +1,4 @@
-import PakistanLocation from "../images/icons/pakistan.png";
+import PakistanLocation from "../images/pakistan.png";
 import { Box } from "@mui/material";
 export default function PakistanIcon() {
   return (

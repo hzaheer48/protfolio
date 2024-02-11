@@ -1,4 +1,4 @@
-import LandingPage from "./components/LandingPage";
+import LandingPage from "./components/LandingPage/LadningPage";
 
 import { createTheme, ThemeProvider } from "@mui/material/styles";
 

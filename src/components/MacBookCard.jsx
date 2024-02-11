@@ -1,16 +1,16 @@
 import React from "react";
 import { Box, Typography } from "@mui/material";
-const MacBookCard = () => {
+const MacBookCard = ({ lightTheme }) => {
   const cardStyle = {
     width: "80%",
-    border: "1px solid #ccc",
+    border: lightTheme ? "1px solid #ccc" : "1px solid #3F2E3E",
     borderRadius: "10px",
     overflow: "hidden",
     margin: "20px",
   };
 
   const headerStyle = {
-    backgroundColor: "#f1f1f1",
+    backgroundColor: lightTheme ? "#f1f1f1" : "#3F2E3E",
     display: "flex",
     justifyContent: "start",
     padding: "10px",
@@ -39,12 +39,13 @@ const MacBookCard = () => {
   };
 
   const contentStyle = {
+    backgroundColor: lightTheme ? "white" : "#3F2E3E",
     padding: "20px",
   };
 
   const textStyle = {
+    color: lightTheme ? "#555" : "white",
     marginBottom: "10px",
-    color: "#555",
   };
 
   return (

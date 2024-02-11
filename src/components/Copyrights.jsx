@@ -2,7 +2,7 @@ import { Box, Typography } from "@mui/material";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import EmailIcon from "@mui/icons-material/Email";
-export default function Copyrights() {
+export default function Copyrights({ lightTheme }) {
   const handleGitHubClick = () => {
     window.open("https://github.com/hzaheer48", "_blank");
   };
@@ -18,8 +18,8 @@ export default function Copyrights() {
     <Box
       style={{
         width: "100%",
-        height: "10vh",
-        backgroundColor: "black",
+        height: "13vh",
+        backgroundColor: lightTheme ? "black" : "#331D2C",
         display: "flex",
         justifyContent: "center",
         alignItems: "center",
